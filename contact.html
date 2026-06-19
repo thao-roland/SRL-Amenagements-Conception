@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact &amp; devis — SRL Aménagements et Conceptions</title>
+    <meta name="description" content="Test d'éligibilité et demande de devis pour votre projet d'aménagement extérieur — réponse sous 24 h." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: {
+        colors: { ink: "#0F1115", "ink-2": "#13161B", "ink-3": "#191D23",
+          sage: { DEFAULT: "#A7C4A0", soft: "#C7DCC1", deep: "#6E8B68" },
+          silver: { DEFAULT: "#D7DBE0", frost: "rgba(215,219,224,0.08)", line: "rgba(215,219,224,0.10)" } },
+        fontFamily: { sans: ['"Plus Jakarta Sans"', "Inter", "ui-sans-serif", "system-ui"] },
+        letterSpacing: { "ultra-tight": "-0.04em" } } } };
+    </script>
+  </head>
+  <body class="bg-ink text-white selection:bg-sage/30 selection:text-white page-enter">
+    <!-- NAV -->
+    <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 text-sage" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 20h18" /><path d="M5 20V9l7-4 7 4v11" /><path d="M5 13h14M5 17h14M9 9v11M15 9v11" />
+            </svg>
+          </span>
+          <div class="leading-tight">
+            <div class="text-[13px] tracking-[0.22em] text-white/90">SRL</div>
+            <div class="text-[10px] tracking-[0.38em] text-white/45">AMÉNAGEMENTS &amp; CONCEPTIONS</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-10 text-sm text-white/70">
+          <a class="nav-link hover:text-white transition" href="index.html">Accueil</a>
+          <a class="nav-link hover:text-white transition" href="services.html">Services</a>
+          <a class="nav-link hover:text-white transition" href="realisations.html">Réalisations</a>
+          <a class="nav-link hover:text-white transition" href="approche.html">Approche</a>
+          <a class="nav-link is-active hover:text-white transition" href="contact.html">Contact</a>
+        </nav>
+        <a href="#form" class="cta hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium">Devis gratuit
+          <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+        </a>
+        <button id="burger" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-silver-line bg-silver-frost" aria-expanded="false" aria-label="Menu">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden frost border-t border-silver-line">
+        <div class="px-6 py-5 flex flex-col gap-4 text-sm text-white/80">
+          <a href="index.html">Accueil</a><a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a><a href="approche.html">Approche</a>
+          <a href="contact.html">Contact</a>
+          <a href="#form" class="cta inline-flex w-fit items-center gap-2 rounded-full px-5 py-2.5">Devis gratuit</a>
+        </div>
+      </div>
+      <div class="hairline opacity-0 transition-opacity duration-500" id="nav-line"></div>
+    </header>
+
+    <!-- HEADER -->
+    <section class="relative pt-40 pb-16 sm:pt-48 sm:pb-20 grain overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(167,196,160,0.10),transparent_60%)]"></div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 relative">
+        <div class="reveal max-w-4xl">
+          <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">CONTACT &amp; DEVIS</div>
+          <h1 class="font-medium tracking-ultra-tight text-[clamp(2.4rem,6vw,5rem)] leading-[0.98]">
+            Parlons de
+            <span class="text-white/55">votre projet.</span>
+          </h1>
+          <p class="mt-7 max-w-2xl text-lg text-white/65 leading-relaxed font-light">
+            Décrivez-nous votre lieu et votre intention — nos artisans
+            reviennent vers vous sous 24 h avec une première estimation,
+            sans engagement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM + INFO -->
+    <section id="form" class="relative pb-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
+        <div class="lg:col-span-5 reveal">
+          <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">TEST D'ÉLIGIBILITÉ</div>
+          <h2 class="font-medium tracking-ultra-tight text-[clamp(2rem,4.5vw,3.2rem)] leading-[1.02]">
+            Quelques instants,
+            <span class="text-white/55">une estimation sérieuse.</span>
+          </h2>
+          <ul class="mt-10 space-y-5 text-sm text-white/65">
+            <li class="flex items-start gap-4"><span class="mt-1 h-6 w-6 rounded-full border border-sage/40 bg-sage/10 flex items-center justify-center"><svg viewBox="0 0 16 16" class="h-3 w-3 text-sage" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7" /></svg></span>Réponse personnalisée sous 24 h</li>
+            <li class="flex items-start gap-4"><span class="mt-1 h-6 w-6 rounded-full border border-sage/40 bg-sage/10 flex items-center justify-center"><svg viewBox="0 0 16 16" class="h-3 w-3 text-sage" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7" /></svg></span>Devis gratuit et sans engagement</li>
+            <li class="flex items-start gap-4"><span class="mt-1 h-6 w-6 rounded-full border border-sage/40 bg-sage/10 flex items-center justify-center"><svg viewBox="0 0 16 16" class="h-3 w-3 text-sage" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7" /></svg></span>Conseil d'un chef de projet dédié</li>
+            <li class="flex items-start gap-4"><span class="mt-1 h-6 w-6 rounded-full border border-sage/40 bg-sage/10 flex items-center justify-center"><svg viewBox="0 0 16 16" class="h-3 w-3 text-sage" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l3 3 7-7" /></svg></span>Visite sur site sans frais</li>
+          </ul>
+
+          <div class="hairline my-10"></div>
+
+          <div class="space-y-5 text-sm">
+            <div>
+              <div class="text-[10px] tracking-[0.3em] text-white/40 mb-1">EMAIL</div>
+              <a href="mailto:contact@srl-amenagements.be" class="text-white/85 hover:text-sage transition">contact@srl-amenagements.be</a>
+            </div>
+            <div>
+              <div class="text-[10px] tracking-[0.3em] text-white/40 mb-1">TÉLÉPHONE</div>
+              <a href="tel:+3240000000" class="text-white/85 hover:text-sage transition">+32 (0)4 00 00 00 00</a>
+            </div>
+            <div>
+              <div class="text-[10px] tracking-[0.3em] text-white/40 mb-1">HORAIRES</div>
+              <div class="text-white/70">Lundi – Vendredi · 08h – 18h</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 reveal">
+          <form id="quoteForm" class="frost rounded-2xl p-8 sm:p-10" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <label class="block">
+                <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">PRÉNOM &amp; NOM</span>
+                <input required type="text" name="name" placeholder="Camille Laurent" class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light" />
+              </label>
+              <label class="block">
+                <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">EMAIL</span>
+                <input required type="email" name="email" placeholder="vous@domaine.be" class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light" />
+              </label>
+              <label class="block">
+                <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">TÉLÉPHONE</span>
+                <input type="tel" name="phone" placeholder="0470 00 00 00" class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light" />
+              </label>
+              <label class="block">
+                <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">CODE POSTAL</span>
+                <input type="text" name="zip" placeholder="4000" class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light" />
+              </label>
+            </div>
+
+            <div class="mt-6">
+              <span class="block text-xs tracking-[0.2em] text-white/45 mb-3">NATURE DU PROJET</span>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" role="radiogroup">
+                <label class="cursor-pointer"><input type="radio" name="service" value="pavage" class="peer sr-only" checked /><span class="block text-center text-sm py-3 rounded-xl border border-silver-line bg-silver-frost text-white/70 peer-checked:border-sage/60 peer-checked:bg-sage/10 peer-checked:text-white transition">Pavage</span></label>
+                <label class="cursor-pointer"><input type="radio" name="service" value="terrassement" class="peer sr-only" /><span class="block text-center text-sm py-3 rounded-xl border border-silver-line bg-silver-frost text-white/70 peer-checked:border-sage/60 peer-checked:bg-sage/10 peer-checked:text-white transition">Terrassement</span></label>
+                <label class="cursor-pointer"><input type="radio" name="service" value="pierres" class="peer sr-only" /><span class="block text-center text-sm py-3 rounded-xl border border-silver-line bg-silver-frost text-white/70 peer-checked:border-sage/60 peer-checked:bg-sage/10 peer-checked:text-white transition">Pierres naturelles</span></label>
+                <label class="cursor-pointer"><input type="radio" name="service" value="egouttage" class="peer sr-only" /><span class="block text-center text-sm py-3 rounded-xl border border-silver-line bg-silver-frost text-white/70 peer-checked:border-sage/60 peer-checked:bg-sage/10 peer-checked:text-white transition">Égouttage</span></label>
+                <label class="cursor-pointer"><input type="radio" name="service" value="pelouse" class="peer sr-only" /><span class="block text-center text-sm py-3 rounded-xl border border-silver-line bg-silver-frost text-white/70 peer-checked:border-sage/60 peer-checked:bg-sage/10 peer-checked:text-white transition">Pelouse</span></label>
+                <label class="cursor-pointer"><input type="radio" name="service" value="cloture" class="peer sr-only" /><span class="block text-center text-sm py-3 rounded-xl border border-silver-line bg-silver-frost text-white/70 peer-checked:border-sage/60 peer-checked:bg-sage/10 peer-checked:text-white transition">Clôtures</span></label>
+              </div>
+            </div>
+
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <label class="block">
+                <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">SURFACE ESTIMÉE</span>
+                <select name="surface" class="field w-full rounded-xl px-4 py-3.5 text-white font-light">
+                  <option>Moins de 50 m²</option>
+                  <option>50 – 150 m²</option>
+                  <option>150 – 300 m²</option>
+                  <option>Plus de 300 m²</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">DÉLAI SOUHAITÉ</span>
+                <select name="timing" class="field w-full rounded-xl px-4 py-3.5 text-white font-light">
+                  <option>Le plus tôt possible</option>
+                  <option>Dans les 3 mois</option>
+                  <option>Dans les 6 mois</option>
+                  <option>Pas de date précise</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="block mt-6">
+              <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">DÉCRIVEZ VOTRE PROJET</span>
+              <textarea name="message" rows="5" placeholder="Quelques lignes sur votre lieu, vos envies, les contraintes éventuelles…" class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light resize-none"></textarea>
+            </label>
+
+            <div class="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+              <p class="text-xs text-white/40 max-w-sm">En soumettant, vous acceptez que SRL traite vos données pour vous répondre. Aucune donnée ne sera partagée.</p>
+              <button type="submit" class="cta inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 text-sm font-medium">
+                Envoyer ma demande
+                <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+              </button>
+            </div>
+
+            <div id="formStatus" class="mt-6 hidden rounded-xl border border-sage/40 bg-sage/10 text-sm text-white/90 px-5 py-4">
+              Merci. Votre demande nous est bien parvenue — un chef de projet vous contactera sous 24 h.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative border-t border-silver-line">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost">
+                <svg viewBox="0 0 24 24" class="h-4 w-4 text-sage" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 20h18" /><path d="M5 20V9l7-4 7 4v11" /><path d="M5 13h14M5 17h14M9 9v11M15 9v11" />
+                </svg>
+              </span>
+              <div class="leading-tight"><div class="text-[13px] tracking-[0.22em]">SRL</div><div class="text-[10px] tracking-[0.38em] text-white/45">AMÉNAGEMENTS &amp; CONCEPTIONS</div></div>
+            </div>
+            <p class="mt-5 text-sm text-white/45 font-light leading-relaxed max-w-xs">Pavage, terrassement, pierres naturelles, égouttages, pelouses et clôtures.</p>
+          </div>
+          <div>
+            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">CONTACT</div>
+            <ul class="space-y-2 text-sm text-white/70 font-light">
+              <li>contact@srl-amenagements.be</li><li>+32 (0)4 00 00 00 00</li>
+              <li>Aménagements extérieurs &amp; pavage</li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">EXPLORER</div>
+            <ul class="space-y-2 text-sm text-white/70 font-light">
+              <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+              <li><a href="realisations.html" class="hover:text-white transition">Réalisations</a></li>
+              <li><a href="approche.html" class="hover:text-white transition">Notre approche</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Devis gratuit</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hairline mt-14"></div>
+        <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-white/35">
+          <div>© 2026 SRL AMÉNAGEMENTS &amp; CONCEPTIONS — TOUS DROITS RÉSERVÉS</div>
+          <div class="flex items-center gap-6"><a href="#" class="hover:text-white/70 transition">MENTIONS LÉGALES</a><a href="#" class="hover:text-white/70 transition">CONFIDENTIALITÉ</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/main.js"></script>
+  </body>
+</html>

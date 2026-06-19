@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SRL Aménagements et Conceptions — Toiture & Élagage de prestige</title>
+    <title>SRL Aménagements et Conceptions — Pavage &amp; aménagements extérieurs</title>
     <meta
       name="description"
-      content="SRL Aménagements et Conceptions — services haut de gamme de toiture, élagage et aménagement paysager. Une exécution sans compromis."
+      content="SRL Aménagements et Conceptions — pavages, terrassements, pierres naturelles, égouttages, pelouses et clôtures. Le pavage en spécialité, l'exigence en signature."
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="assets/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -39,322 +38,103 @@
             fontFamily: {
               sans: ['"Plus Jakarta Sans"', "Inter", "ui-sans-serif", "system-ui"],
             },
-            letterSpacing: {
-              "ultra-tight": "-0.04em",
-            },
-            boxShadow: {
-              "sage-glow":
-                "0 0 0 1px rgba(167,196,160,0.25), 0 10px 40px -10px rgba(167,196,160,0.35)",
-            },
+            letterSpacing: { "ultra-tight": "-0.04em" },
           },
         },
       };
     </script>
-
-    <style>
-      :root {
-        color-scheme: dark;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        background: #0f1115;
-        color: #ffffff;
-        font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, system-ui,
-          -apple-system, "Segoe UI", Roboto, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-      }
-
-      /* Subtle grain over hero */
-      .grain::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        opacity: 0.06;
-        mix-blend-mode: overlay;
-        background-image: radial-gradient(
-            rgba(255, 255, 255, 0.6) 1px,
-            transparent 1px
-          );
-        background-size: 3px 3px;
-      }
-
-      /* Hairline divider */
-      .hairline {
-        height: 1px;
-        background: linear-gradient(
-          to right,
-          transparent,
-          rgba(215, 219, 224, 0.18),
-          transparent
-        );
-      }
-
-      /* Frosted glass */
-      .frost {
-        background: rgba(25, 29, 35, 0.55);
-        backdrop-filter: saturate(140%) blur(14px);
-        -webkit-backdrop-filter: saturate(140%) blur(14px);
-        border: 1px solid rgba(215, 219, 224, 0.08);
-      }
-
-      /* CTA — translucent with soft sage glow */
-      .cta {
-        position: relative;
-        background: rgba(167, 196, 160, 0.08);
-        border: 1px solid rgba(167, 196, 160, 0.35);
-        color: #ffffff;
-        transition: all 320ms cubic-bezier(0.22, 1, 0.36, 1);
-        box-shadow:
-          0 0 0 1px rgba(167, 196, 160, 0.15),
-          0 12px 40px -12px rgba(167, 196, 160, 0.45);
-      }
-      .cta:hover {
-        background: rgba(167, 196, 160, 0.16);
-        border-color: rgba(167, 196, 160, 0.6);
-        box-shadow:
-          0 0 0 1px rgba(167, 196, 160, 0.35),
-          0 18px 60px -10px rgba(167, 196, 160, 0.55);
-        transform: translateY(-1px);
-      }
-      .cta::after {
-        content: "";
-        position: absolute;
-        inset: -1px;
-        border-radius: inherit;
-        background: radial-gradient(
-          120% 120% at 50% 0%,
-          rgba(167, 196, 160, 0.18),
-          transparent 60%
-        );
-        pointer-events: none;
-        opacity: 0.7;
-      }
-
-      /* Scroll reveal */
-      .reveal {
-        opacity: 0;
-        transform: translateY(24px);
-        transition:
-          opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
-          transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-        will-change: opacity, transform;
-      }
-      .reveal.in {
-        opacity: 1;
-        transform: none;
-      }
-
-      /* Slow parallax on hero image */
-      .parallax {
-        transform: translate3d(0, var(--p, 0px), 0) scale(1.06);
-        transition: transform 200ms linear;
-        will-change: transform;
-      }
-
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0f1115;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: rgba(215, 219, 224, 0.08);
-        border-radius: 999px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(215, 219, 224, 0.18);
-      }
-
-      /* Input styles */
-      .field {
-        background: rgba(25, 29, 35, 0.55);
-        border: 1px solid rgba(215, 219, 224, 0.08);
-        transition: border-color 220ms ease, box-shadow 220ms ease,
-          background 220ms ease;
-      }
-      .field:focus {
-        outline: none;
-        border-color: rgba(167, 196, 160, 0.5);
-        background: rgba(25, 29, 35, 0.75);
-        box-shadow: 0 0 0 4px rgba(167, 196, 160, 0.08);
-      }
-
-      /* Disable reveal animation for users who prefer reduced motion */
-      @media (prefers-reduced-motion: reduce) {
-        .reveal {
-          opacity: 1;
-          transform: none;
-          transition: none;
-        }
-        .parallax {
-          transform: none;
-        }
-        html {
-          scroll-behavior: auto;
-        }
-      }
-    </style>
   </head>
 
-  <body class="bg-ink text-white selection:bg-sage/30 selection:text-white">
-    <!-- ───────── NAV ───────── -->
-    <header
-      id="nav"
-      class="fixed top-0 inset-x-0 z-50 transition-all duration-500"
-    >
-      <div
-        class="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between"
-      >
-        <a href="#top" class="flex items-center gap-3 group">
-          <span
-            class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost"
-          >
-            <!-- Monogram leaf -->
-            <svg
-              viewBox="0 0 24 24"
-              class="h-4 w-4 text-sage"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path d="M4 20c8 0 16-6 16-16-8 0-16 6-16 16Z" />
-              <path d="M4 20c4-4 8-8 16-16" />
+  <body class="bg-ink text-white selection:bg-sage/30 selection:text-white page-enter">
+    <!-- NAV -->
+    <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 text-sage" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 20h18" />
+              <path d="M5 20V9l7-4 7 4v11" />
+              <path d="M5 13h14M5 17h14M9 9v11M15 9v11" />
             </svg>
           </span>
           <div class="leading-tight">
-            <div class="text-[13px] tracking-[0.22em] text-white/90">
-              SRL
-            </div>
-            <div class="text-[10px] tracking-[0.38em] text-white/45">
-              AMÉNAGEMENTS &amp; CONCEPTIONS
-            </div>
+            <div class="text-[13px] tracking-[0.22em] text-white/90">SRL</div>
+            <div class="text-[10px] tracking-[0.38em] text-white/45">AMÉNAGEMENTS &amp; CONCEPTIONS</div>
           </div>
         </a>
 
         <nav class="hidden md:flex items-center gap-10 text-sm text-white/70">
-          <a class="hover:text-white transition" href="#services">Services</a>
-          <a class="hover:text-white transition" href="#realisations"
-            >Réalisations</a
-          >
-          <a class="hover:text-white transition" href="#approche">Approche</a>
-          <a class="hover:text-white transition" href="#contact">Contact</a>
+          <a class="nav-link is-active hover:text-white transition" href="index.html">Accueil</a>
+          <a class="nav-link hover:text-white transition" href="services.html">Services</a>
+          <a class="nav-link hover:text-white transition" href="realisations.html">Réalisations</a>
+          <a class="nav-link hover:text-white transition" href="approche.html">Approche</a>
+          <a class="nav-link hover:text-white transition" href="contact.html">Contact</a>
         </nav>
 
-        <a
-          href="#contact"
-          class="cta hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium"
-        >
+        <a href="contact.html" class="cta hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium">
           Devis gratuit
-          <svg
-            viewBox="0 0 20 20"
-            class="h-3.5 w-3.5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-          >
-            <path d="M4 10h12M11 5l5 5-5 5" />
-          </svg>
+          <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
         </a>
+
+        <button id="burger" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-silver-line bg-silver-frost" aria-expanded="false" aria-label="Menu">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden frost border-t border-silver-line">
+        <div class="px-6 py-5 flex flex-col gap-4 text-sm text-white/80">
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a>
+          <a href="approche.html">Approche</a>
+          <a href="contact.html">Contact</a>
+          <a href="contact.html" class="cta inline-flex w-fit items-center gap-2 rounded-full px-5 py-2.5">Devis gratuit</a>
+        </div>
       </div>
       <div class="hairline opacity-0 transition-opacity duration-500" id="nav-line"></div>
     </header>
 
-    <!-- ───────── HERO ───────── -->
-    <section
-      id="top"
-      class="relative grain min-h-[100svh] w-full overflow-hidden"
-    >
-      <!-- Hero photo -->
+    <!-- HERO -->
+    <section class="relative grain min-h-[100svh] w-full overflow-hidden">
       <div class="absolute inset-0">
         <img
-          id="heroImg"
           class="parallax h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80"
-          alt="Toit moderne d'une résidence d'architecte"
+          src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=2400&q=80"
+          alt="Allée pavée en pierre naturelle bordée d'une pelouse soignée"
         />
-        <!-- Tonal gradient -->
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/55 to-ink"
-        ></div>
-        <div
-          class="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_10%,rgba(167,196,160,0.10),transparent_60%)]"
-        ></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/55 to-ink"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_10%,rgba(167,196,160,0.10),transparent_60%)]"></div>
       </div>
 
-      <!-- Content -->
-      <div
-        class="relative z-10 mx-auto max-w-7xl px-6 lg:px-10 pt-40 pb-28 flex flex-col justify-center min-h-[100svh]"
-      >
+      <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-10 pt-40 pb-28 flex flex-col justify-center min-h-[100svh]">
         <div class="reveal max-w-3xl">
-          <div
-            class="inline-flex items-center gap-2 rounded-full border border-silver-line bg-silver-frost px-3 py-1 text-[11px] tracking-[0.25em] text-white/70"
-          >
+          <div class="inline-flex items-center gap-2 rounded-full border border-silver-line bg-silver-frost px-3 py-1 text-[11px] tracking-[0.25em] text-white/70">
             <span class="h-1.5 w-1.5 rounded-full bg-sage"></span>
-            TOITURE · ÉLAGAGE · PAYSAGISME
+            PAVAGE · TERRASSEMENT · PIERRES NATURELLES
           </div>
-
-          <h1
-            class="mt-8 font-medium tracking-ultra-tight text-white text-[clamp(2.6rem,7vw,5.5rem)] leading-[0.98]"
-          >
-            L'art du toit.
+          <h1 class="mt-8 font-medium tracking-ultra-tight text-white text-[clamp(2.6rem,7vw,5.5rem)] leading-[0.98]">
+            Le pavage,
             <br />
-            <span class="text-white/70">L'élégance du jardin.</span>
+            <span class="text-white/70">comme une signature.</span>
           </h1>
-
-          <p
-            class="mt-7 max-w-xl text-base sm:text-lg text-white/65 leading-relaxed font-light"
-          >
-            Une exécution sans compromis pour vos toitures et vos espaces
-            extérieurs — pensés, dessinés et entretenus par des artisans
-            d'exception.
+          <p class="mt-7 max-w-xl text-base sm:text-lg text-white/65 leading-relaxed font-light">
+            Pavages, terrassements, pierres naturelles, égouttages, pelouses
+            et clôtures — chaque extérieur posé au millimètre, conçu pour
+            durer.
           </p>
-
           <div class="mt-10 flex flex-wrap items-center gap-5">
-            <a
-              href="#contact"
-              class="cta inline-flex items-center gap-3 rounded-full px-7 py-4 text-sm font-medium"
-            >
+            <a href="contact.html" class="cta inline-flex items-center gap-3 rounded-full px-7 py-4 text-sm font-medium">
               Demander un devis gratuit
-              <svg
-                viewBox="0 0 20 20"
-                class="h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-              >
-                <path d="M4 10h12M11 5l5 5-5 5" />
-              </svg>
+              <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
             </a>
-            <a
-              href="#services"
-              class="text-sm text-white/60 hover:text-white transition inline-flex items-center gap-2"
-            >
+            <a href="services.html" class="text-sm text-white/60 hover:text-white transition inline-flex items-center gap-2">
               Découvrir nos services
-              <svg
-                viewBox="0 0 20 20"
-                class="h-3.5 w-3.5"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-              >
-                <path d="M5 8l5 5 5-5" />
-              </svg>
+              <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8l5 5 5-5" /></svg>
             </a>
           </div>
         </div>
-
-        <!-- Bottom meta line -->
-        <div
-          class="absolute left-6 right-6 lg:left-10 lg:right-10 bottom-8 flex items-end justify-between text-[11px] tracking-[0.25em] text-white/40"
-        >
-          <span>EST. 2009 — FRANCE</span>
-          <a href="#services" class="flex items-center gap-2 hover:text-white/80 transition">
+        <div class="absolute left-6 right-6 lg:left-10 lg:right-10 bottom-8 flex items-end justify-between text-[11px] tracking-[0.25em] text-white/40">
+          <span>SPÉCIALISTE DU PAVAGE</span>
+          <a href="#intro" class="flex items-center gap-2 hover:text-white/80 transition">
             <span>SCROLL</span>
             <span class="block h-8 w-px bg-white/20"></span>
           </a>
@@ -362,217 +142,129 @@
       </div>
     </section>
 
-    <!-- ───────── BENTO / SERVICES ───────── -->
-    <section id="services" class="relative py-28 sm:py-36">
-      <div class="mx-auto max-w-7xl px-6 lg:px-10">
-        <div class="flex items-end justify-between gap-10 flex-wrap reveal">
-          <div class="max-w-2xl">
-            <div
-              class="text-[11px] tracking-[0.3em] text-sage/90 mb-5"
-            >
-              ① NOS DOMAINES
-            </div>
-            <h2
-              class="font-medium tracking-ultra-tight text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.02]"
-            >
-              Trois disciplines.
-              <span class="text-white/55">Une seule exigence.</span>
-            </h2>
-          </div>
-          <p class="max-w-md text-white/55 font-light leading-relaxed">
-            De la charpente au branchage, chacune de nos interventions est
-            traitée comme une pièce unique — soignée, mesurée, durable.
+    <!-- INTRO -->
+    <section id="intro" class="relative py-28 sm:py-36">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-14">
+        <div class="lg:col-span-5 reveal">
+          <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">① UNE SEULE EXIGENCE</div>
+          <h2 class="font-medium tracking-ultra-tight text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.02]">
+            L'extérieur,
+            <span class="text-white/55">pensé jusqu'au dernier joint.</span>
+          </h2>
+        </div>
+        <div class="lg:col-span-7 reveal space-y-6 text-white/65 font-light leading-relaxed text-lg">
+          <p>
+            SRL Aménagements et Conceptions ne fait que de l'aménagement
+            extérieur. Nous y apportons la rigueur d'un artisan du sol :
+            tracé, niveau, drainage, choix de la pierre.
+          </p>
+          <p>
+            Le pavage est notre spécialité — celle qui donne le ton à tout
+            le reste. Allées, terrasses, cours et abords sont posés à la
+            main, calepinage maîtrisé, joints serrés.
           </p>
         </div>
+      </div>
+    </section>
 
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-5">
-          <!-- Card 1 — Toiture -->
-          <article
-            class="reveal frost rounded-2xl p-8 sm:p-10 group transition hover:-translate-y-1 hover:border-sage/30 duration-500"
-          >
-            <div
-              class="h-12 w-12 rounded-xl border border-silver-line bg-silver-frost flex items-center justify-center mb-10 group-hover:border-sage/40 transition"
-            >
-              <svg
-                viewBox="0 0 32 32"
-                class="h-6 w-6 text-sage"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.25"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M3 16 16 5l13 11" />
-                <path d="M6 14v13h20V14" />
-                <path d="M13 27v-7h6v7" />
+    <!-- SERVICES PREVIEW -->
+    <section class="relative py-10 pb-28 sm:pb-36">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="flex items-end justify-between gap-10 flex-wrap reveal mb-16">
+          <div>
+            <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">② NOS DOMAINES</div>
+            <h2 class="font-medium tracking-ultra-tight text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.02]">
+              Six métiers,
+              <span class="text-white/55">une seule équipe.</span>
+            </h2>
+          </div>
+          <a href="services.html" class="ghost inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm">
+            Tous les services
+            <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <article class="reveal frost rounded-2xl p-8 sm:p-10 group transition hover:-translate-y-1 hover:border-sage/30 duration-500">
+            <div class="h-12 w-12 rounded-xl border border-silver-line bg-silver-frost flex items-center justify-center mb-10 group-hover:border-sage/40 transition">
+              <svg viewBox="0 0 32 32" class="h-6 w-6 text-sage" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="10" height="10" /><rect x="18" y="4" width="10" height="10" />
+                <rect x="4" y="18" width="10" height="10" /><rect x="18" y="18" width="10" height="10" />
               </svg>
             </div>
-            <h3 class="text-xl font-medium">Toiture &amp; Couverture</h3>
+            <div class="text-[10px] tracking-[0.3em] text-sage mb-3">SPÉCIALITÉ</div>
+            <h3 class="text-xl font-medium">Pavage</h3>
             <p class="mt-3 text-white/55 font-light leading-relaxed">
-              Pose, rénovation et entretien de toitures contemporaines en
-              ardoise, zinc, tuile ou bac acier — étanchéité parfaite,
-              esthétique souveraine.
+              Allées, terrasses, cours et plages de piscine — pose à la main,
+              calepinage soigné, finitions invisibles.
             </p>
-            <ul class="mt-8 space-y-2 text-sm text-white/55">
-              <li class="flex items-center gap-3">
-                <span class="h-px w-4 bg-sage/60"></span> Charpente sur-mesure
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-px w-4 bg-sage/60"></span> Étanchéité &amp;
-                isolation
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-px w-4 bg-sage/60"></span> Zinguerie &amp;
-                ornement
-              </li>
-            </ul>
           </article>
 
-          <!-- Card 2 — Élagage -->
-          <article
-            class="reveal frost rounded-2xl p-8 sm:p-10 group transition hover:-translate-y-1 hover:border-sage/30 duration-500"
-            style="transition-delay: 80ms"
-          >
-            <div
-              class="h-12 w-12 rounded-xl border border-silver-line bg-silver-frost flex items-center justify-center mb-10 group-hover:border-sage/40 transition"
-            >
-              <svg
-                viewBox="0 0 32 32"
-                class="h-6 w-6 text-sage"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.25"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M16 28V12" />
-                <path d="M16 12c-4-4-9-4-9-9 5 0 9 3 9 9Z" />
-                <path d="M16 14c4-4 9-4 9-9-5 0-9 3-9 9Z" />
-                <path d="M10 28h12" />
+          <article class="reveal frost rounded-2xl p-8 sm:p-10 group transition hover:-translate-y-1 hover:border-sage/30 duration-500" style="transition-delay: 80ms">
+            <div class="h-12 w-12 rounded-xl border border-silver-line bg-silver-frost flex items-center justify-center mb-10 group-hover:border-sage/40 transition">
+              <svg viewBox="0 0 32 32" class="h-6 w-6 text-sage" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 24h26" /><path d="M6 24l4-10h12l4 10" />
+                <path d="M10 14l3-5h6l3 5" />
               </svg>
             </div>
-            <h3 class="text-xl font-medium">Élagage &amp; Abattage</h3>
+            <h3 class="text-xl font-medium">Terrassement</h3>
             <p class="mt-3 text-white/55 font-light leading-relaxed">
-              Taille raisonnée, démontage sécurisé et soin des arbres
-              remarquables, dans le respect du végétal et des règles
-              arboricoles.
+              Décapage, nivellement, fondations stables — la base sans
+              laquelle aucun pavage ne tient.
             </p>
-            <ul class="mt-8 space-y-2 text-sm text-white/55">
-              <li class="flex items-center gap-3">
-                <span class="h-px w-4 bg-sage/60"></span> Taille douce &amp;
-                architecturée
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-px w-4 bg-sage/60"></span> Démontage par
-                rétention
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-px w-4 bg-sage/60"></span> Diagnostic phytosanitaire
-              </li>
-            </ul>
           </article>
 
-          <!-- Card 3 — Paysagisme -->
-          <article
-            class="reveal frost rounded-2xl p-8 sm:p-10 group transition hover:-translate-y-1 hover:border-sage/30 duration-500"
-            style="transition-delay: 160ms"
-          >
-            <div
-              class="h-12 w-12 rounded-xl border border-silver-line bg-silver-frost flex items-center justify-center mb-10 group-hover:border-sage/40 transition"
-            >
-              <svg
-                viewBox="0 0 32 32"
-                class="h-6 w-6 text-sage"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.25"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 26h24" />
-                <path d="M8 26c0-6 4-10 8-10s8 4 8 10" />
-                <path d="M16 16V6" />
-                <path d="M12 9l4-3 4 3" />
+          <article class="reveal frost rounded-2xl p-8 sm:p-10 group transition hover:-translate-y-1 hover:border-sage/30 duration-500" style="transition-delay: 160ms">
+            <div class="h-12 w-12 rounded-xl border border-silver-line bg-silver-frost flex items-center justify-center mb-10 group-hover:border-sage/40 transition">
+              <svg viewBox="0 0 32 32" class="h-6 w-6 text-sage" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 27l8-10 5 6 4-5 7 9" />
+                <path d="M4 27h24" />
               </svg>
             </div>
-            <h3 class="text-xl font-medium">Paysagisme &amp; Conception</h3>
+            <h3 class="text-xl font-medium">Pierres naturelles</h3>
             <p class="mt-3 text-white/55 font-light leading-relaxed">
-              De la planche à dessin à la dernière vivace : conception, création
-              et entretien d'extérieurs où chaque détail répond à une
-              intention.
+              Murets, dallages, bordures et habillages en pierre bleue,
+              granit, grès ou porphyre.
             </p>
-            <ul class="mt-8 space-y-2 text-sm text-white/55">
-              <li class="flex items-center gap-3">
-                <span class="h-px w-4 bg-sage/60"></span> Plans 3D &amp;
-                masterplan
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-px w-4 bg-sage/60"></span> Massifs &amp;
-                topiaires
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="h-px w-4 bg-sage/60"></span> Entretien annuel
-                premium
-              </li>
-            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ───────── FULL-WIDTH GARDEN IMAGE ───────── -->
-    <section id="realisations" class="relative">
+    <!-- FULL-WIDTH IMAGE + STATS -->
+    <section class="relative">
       <div class="relative h-[70vh] sm:h-[88vh] w-full overflow-hidden">
         <img
           class="parallax h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=2400&q=80"
-          alt="Jardin manucuré contemporain"
+          src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=2400&q=80"
+          alt="Pelouse impeccable et abords paysagers"
         />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent"
-        ></div>
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-ink/50 via-transparent to-transparent"
-        ></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-ink/50 via-transparent to-transparent"></div>
 
-        <div
-          class="absolute inset-x-0 bottom-0 px-6 lg:px-10 pb-16 sm:pb-24"
-        >
+        <div class="absolute inset-x-0 bottom-0 px-6 lg:px-10 pb-16 sm:pb-24">
           <div class="mx-auto max-w-7xl reveal">
-            <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">
-              ② NOS RÉALISATIONS
-            </div>
-            <h2
-              class="font-medium tracking-ultra-tight text-[clamp(2rem,5vw,4rem)] leading-[1.02] max-w-3xl"
-            >
-              Des extérieurs dessinés
-              <span class="text-white/55">comme des intérieurs.</span>
+            <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">③ EN QUELQUES CHIFFRES</div>
+            <h2 class="font-medium tracking-ultra-tight text-[clamp(2rem,5vw,4rem)] leading-[1.02] max-w-3xl">
+              Une exigence
+              <span class="text-white/55">qui se mesure aussi.</span>
             </h2>
-
             <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-10 gap-y-6 max-w-3xl">
               <div>
-                <div class="text-3xl font-medium tracking-tight" data-count="14">0</div>
-                <div class="text-xs tracking-[0.18em] text-white/40 mt-1">
-                  ANNÉES D'EXPERTISE
-                </div>
+                <div class="text-3xl font-medium tracking-tight" data-count="15">0</div>
+                <div class="text-xs tracking-[0.18em] text-white/40 mt-1">ANNÉES D'EXPERTISE</div>
               </div>
               <div>
-                <div class="text-3xl font-medium tracking-tight" data-count="320">0</div>
-                <div class="text-xs tracking-[0.18em] text-white/40 mt-1">
-                  CHANTIERS LIVRÉS
-                </div>
+                <div class="text-3xl font-medium tracking-tight" data-count="420">0</div>
+                <div class="text-xs tracking-[0.18em] text-white/40 mt-1">CHANTIERS LIVRÉS</div>
               </div>
               <div>
                 <div class="text-3xl font-medium tracking-tight" data-count="98">0</div>
-                <div class="text-xs tracking-[0.18em] text-white/40 mt-1">
-                  % CLIENTS FIDÈLES
-                </div>
+                <div class="text-xs tracking-[0.18em] text-white/40 mt-1">% CLIENTS FIDÈLES</div>
               </div>
               <div>
                 <div class="text-3xl font-medium tracking-tight" data-count="10">0</div>
-                <div class="text-xs tracking-[0.18em] text-white/40 mt-1">
-                  ANS DE GARANTIE
-                </div>
+                <div class="text-xs tracking-[0.18em] text-white/40 mt-1">ANS DE GARANTIE</div>
               </div>
             </div>
           </div>
@@ -580,346 +272,70 @@
       </div>
     </section>
 
-    <!-- ───────── APPROCHE / TIMELINE ───────── -->
-    <section id="approche" class="relative py-28 sm:py-36">
-      <div class="mx-auto max-w-7xl px-6 lg:px-10">
-        <div class="reveal max-w-3xl">
-          <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">
-            ③ NOTRE APPROCHE
-          </div>
-          <h2
-            class="font-medium tracking-ultra-tight text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.02]"
-          >
-            Une méthode mesurée,
-            <span class="text-white/55">de la première visite à la dernière finition.</span>
-          </h2>
-        </div>
-
-        <div class="mt-20 grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div class="reveal">
-            <div class="text-sage text-sm tracking-[0.25em]">01 — ÉCOUTE</div>
-            <h3 class="mt-4 text-xl font-medium">Étude sur site</h3>
-            <p class="mt-3 text-white/55 font-light leading-relaxed">
-              Nous prenons le temps de comprendre votre lieu, vos contraintes
-              et vos désirs.
-            </p>
-          </div>
-          <div class="reveal" style="transition-delay: 80ms">
-            <div class="text-sage text-sm tracking-[0.25em]">02 — CONCEPTION</div>
-            <h3 class="mt-4 text-xl font-medium">Plan &amp; devis détaillé</h3>
-            <p class="mt-3 text-white/55 font-light leading-relaxed">
-              Un projet documenté, des matériaux choisis, un budget transparent.
-            </p>
-          </div>
-          <div class="reveal" style="transition-delay: 160ms">
-            <div class="text-sage text-sm tracking-[0.25em]">03 — RÉALISATION</div>
-            <h3 class="mt-4 text-xl font-medium">Chantier soigné</h3>
-            <p class="mt-3 text-white/55 font-light leading-relaxed">
-              Une équipe restreinte, des étapes maîtrisées, un site impeccable.
-            </p>
-          </div>
-          <div class="reveal" style="transition-delay: 240ms">
-            <div class="text-sage text-sm tracking-[0.25em]">04 — SUIVI</div>
-            <h3 class="mt-4 text-xl font-medium">Garantie &amp; entretien</h3>
-            <p class="mt-3 text-white/55 font-light leading-relaxed">
-              Un accompagnement durable, parce qu'un bel ouvrage se cultive.
-            </p>
-          </div>
+    <!-- CTA STRIP -->
+    <section class="relative py-28 sm:py-36">
+      <div class="mx-auto max-w-5xl px-6 lg:px-10 text-center reveal">
+        <h2 class="font-medium tracking-ultra-tight text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.02]">
+          Un projet d'extérieur ?
+          <span class="text-white/55">Parlons-en.</span>
+        </h2>
+        <p class="mt-6 text-white/60 font-light leading-relaxed max-w-xl mx-auto">
+          Visite sur site, plan, devis détaillé — sans engagement. Une équipe
+          réduite, des étapes maîtrisées, un chantier impeccable.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-5">
+          <a href="contact.html" class="cta inline-flex items-center gap-3 rounded-full px-7 py-4 text-sm font-medium">
+            Demander un devis gratuit
+            <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+          </a>
+          <a href="realisations.html" class="ghost inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm">
+            Voir nos réalisations
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ───────── ELIGIBILITY / CONTACT ───────── -->
-    <section
-      id="contact"
-      class="relative py-28 sm:py-36 overflow-hidden"
-    >
-      <div
-        class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"
-      ></div>
-      <div
-        class="absolute -top-40 left-1/2 -translate-x-1/2 h-[420px] w-[820px] rounded-full bg-sage/10 blur-3xl pointer-events-none"
-      ></div>
-
-      <div class="mx-auto max-w-7xl px-6 lg:px-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
-          <div class="lg:col-span-5 reveal">
-            <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">
-              ④ TEST D'ÉLIGIBILITÉ
-            </div>
-            <h2
-              class="font-medium tracking-ultra-tight text-[clamp(2rem,4.5vw,3.6rem)] leading-[1.02]"
-            >
-              Estimez votre projet
-              <span class="text-white/55">en quelques instants.</span>
-            </h2>
-            <p class="mt-6 text-white/60 font-light leading-relaxed max-w-md">
-              Décrivez-nous votre lieu et votre intention. Nos artisans vous
-              reviennent sous 24 h avec une première estimation — sans
-              engagement.
-            </p>
-
-            <ul class="mt-10 space-y-5 text-sm text-white/65">
-              <li class="flex items-start gap-4">
-                <span
-                  class="mt-1 h-6 w-6 rounded-full border border-sage/40 bg-sage/10 flex items-center justify-center"
-                >
-                  <svg
-                    viewBox="0 0 16 16"
-                    class="h-3 w-3 text-sage"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M3 8l3 3 7-7" />
-                  </svg>
-                </span>
-                Réponse personnalisée sous 24 h
-              </li>
-              <li class="flex items-start gap-4">
-                <span
-                  class="mt-1 h-6 w-6 rounded-full border border-sage/40 bg-sage/10 flex items-center justify-center"
-                >
-                  <svg
-                    viewBox="0 0 16 16"
-                    class="h-3 w-3 text-sage"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M3 8l3 3 7-7" />
-                  </svg>
-                </span>
-                Devis gratuit et sans engagement
-              </li>
-              <li class="flex items-start gap-4">
-                <span
-                  class="mt-1 h-6 w-6 rounded-full border border-sage/40 bg-sage/10 flex items-center justify-center"
-                >
-                  <svg
-                    viewBox="0 0 16 16"
-                    class="h-3 w-3 text-sage"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M3 8l3 3 7-7" />
-                  </svg>
-                </span>
-                Conseil d'un chef de projet dédié
-              </li>
-            </ul>
-          </div>
-
-          <div class="lg:col-span-7 reveal">
-            <form
-              id="quoteForm"
-              class="frost rounded-2xl p-8 sm:p-10"
-              novalidate
-            >
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <label class="block">
-                  <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">
-                    PRÉNOM &amp; NOM
-                  </span>
-                  <input
-                    required
-                    type="text"
-                    name="name"
-                    placeholder="Camille Laurent"
-                    class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light"
-                  />
-                </label>
-                <label class="block">
-                  <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">
-                    EMAIL
-                  </span>
-                  <input
-                    required
-                    type="email"
-                    name="email"
-                    placeholder="vous@domaine.fr"
-                    class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light"
-                  />
-                </label>
-                <label class="block">
-                  <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">
-                    TÉLÉPHONE
-                  </span>
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="06 00 00 00 00"
-                    class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light"
-                  />
-                </label>
-                <label class="block">
-                  <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">
-                    CODE POSTAL
-                  </span>
-                  <input
-                    type="text"
-                    name="zip"
-                    placeholder="75001"
-                    class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light"
-                  />
-                </label>
-              </div>
-
-              <div class="mt-6">
-                <span class="block text-xs tracking-[0.2em] text-white/45 mb-3">
-                  NATURE DU PROJET
-                </span>
-                <div class="grid grid-cols-3 gap-3" role="radiogroup">
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="service"
-                      value="toiture"
-                      class="peer sr-only"
-                      checked
-                    />
-                    <span
-                      class="block text-center text-sm py-3 rounded-xl border border-silver-line bg-silver-frost text-white/70 peer-checked:border-sage/60 peer-checked:bg-sage/10 peer-checked:text-white transition"
-                      >Toiture</span
-                    >
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="service"
-                      value="elagage"
-                      class="peer sr-only"
-                    />
-                    <span
-                      class="block text-center text-sm py-3 rounded-xl border border-silver-line bg-silver-frost text-white/70 peer-checked:border-sage/60 peer-checked:bg-sage/10 peer-checked:text-white transition"
-                      >Élagage</span
-                    >
-                  </label>
-                  <label class="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="service"
-                      value="paysagisme"
-                      class="peer sr-only"
-                    />
-                    <span
-                      class="block text-center text-sm py-3 rounded-xl border border-silver-line bg-silver-frost text-white/70 peer-checked:border-sage/60 peer-checked:bg-sage/10 peer-checked:text-white transition"
-                      >Paysagisme</span
-                    >
-                  </label>
-                </div>
-              </div>
-
-              <label class="block mt-6">
-                <span class="block text-xs tracking-[0.2em] text-white/45 mb-2">
-                  DÉCRIVEZ VOTRE PROJET
-                </span>
-                <textarea
-                  name="message"
-                  rows="4"
-                  placeholder="Quelques lignes sur votre lieu, vos envies, vos échéances…"
-                  class="field w-full rounded-xl px-4 py-3.5 text-white placeholder-white/25 font-light resize-none"
-                ></textarea>
-              </label>
-
-              <div class="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
-                <p class="text-xs text-white/40 max-w-sm">
-                  En soumettant, vous acceptez que SRL traite vos données pour
-                  vous répondre. Aucune donnée ne sera partagée.
-                </p>
-                <button
-                  type="submit"
-                  class="cta inline-flex items-center justify-center gap-3 rounded-full px-7 py-4 text-sm font-medium"
-                >
-                  Envoyer ma demande
-                  <svg
-                    viewBox="0 0 20 20"
-                    class="h-4 w-4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                  >
-                    <path d="M4 10h12M11 5l5 5-5 5" />
-                  </svg>
-                </button>
-              </div>
-
-              <div
-                id="formStatus"
-                class="mt-6 hidden rounded-xl border border-sage/40 bg-sage/10 text-sm text-white/90 px-5 py-4"
-              >
-                Merci. Votre demande nous est bien parvenue — un chef de projet
-                vous contactera sous 24 h.
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────── FOOTER ───────── -->
+    <!-- FOOTER -->
     <footer class="relative border-t border-silver-line">
       <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div class="flex items-center gap-3">
-              <span
-                class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  class="h-4 w-4 text-sage"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M4 20c8 0 16-6 16-16-8 0-16 6-16 16Z" />
-                  <path d="M4 20c4-4 8-8 16-16" />
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost">
+                <svg viewBox="0 0 24 24" class="h-4 w-4 text-sage" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 20h18" /><path d="M5 20V9l7-4 7 4v11" /><path d="M5 13h14M5 17h14M9 9v11M15 9v11" />
                 </svg>
               </span>
               <div class="leading-tight">
                 <div class="text-[13px] tracking-[0.22em]">SRL</div>
-                <div class="text-[10px] tracking-[0.38em] text-white/45">
-                  AMÉNAGEMENTS &amp; CONCEPTIONS
-                </div>
+                <div class="text-[10px] tracking-[0.38em] text-white/45">AMÉNAGEMENTS &amp; CONCEPTIONS</div>
               </div>
             </div>
             <p class="mt-5 text-sm text-white/45 font-light leading-relaxed max-w-xs">
-              Toiture, élagage et paysagisme d'exception. Une exigence
-              artisanale au service de votre lieu.
+              Pavage, terrassement, pierres naturelles, égouttages, pelouses
+              et clôtures. L'aménagement extérieur, sans compromis.
             </p>
           </div>
-
           <div>
-            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">
-              CONTACT
-            </div>
+            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">CONTACT</div>
             <ul class="space-y-2 text-sm text-white/70 font-light">
-              <li>contact@srl-amenagements.fr</li>
-              <li>+33 (0)1 84 00 00 00</li>
-              <li>12 rue des Tilleuls, 75008 Paris</li>
+              <li>contact@srl-amenagements.be</li>
+              <li>+32 (0)4 00 00 00 00</li>
+              <li>Aménagements extérieurs &amp; pavage</li>
             </ul>
           </div>
-
           <div>
-            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">
-              EXPLORER
-            </div>
+            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">EXPLORER</div>
             <ul class="space-y-2 text-sm text-white/70 font-light">
-              <li><a href="#services" class="hover:text-white transition">Services</a></li>
-              <li><a href="#realisations" class="hover:text-white transition">Réalisations</a></li>
-              <li><a href="#approche" class="hover:text-white transition">Notre approche</a></li>
-              <li><a href="#contact" class="hover:text-white transition">Devis gratuit</a></li>
+              <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+              <li><a href="realisations.html" class="hover:text-white transition">Réalisations</a></li>
+              <li><a href="approche.html" class="hover:text-white transition">Notre approche</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Devis gratuit</a></li>
             </ul>
           </div>
         </div>
-
         <div class="hairline mt-14"></div>
-
-        <div
-          class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-white/35"
-        >
+        <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-white/35">
           <div>© 2026 SRL AMÉNAGEMENTS &amp; CONCEPTIONS — TOUS DROITS RÉSERVÉS</div>
           <div class="flex items-center gap-6">
             <a href="#" class="hover:text-white/70 transition">MENTIONS LÉGALES</a>
@@ -929,97 +345,6 @@
       </div>
     </footer>
 
-    <!-- ───────── SCRIPTS ───────── -->
-    <script>
-      // Reveal-on-scroll
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("in");
-              io.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.14, rootMargin: "0px 0px -40px 0px" }
-      );
-      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-
-      // Nav background on scroll
-      const nav = document.getElementById("nav");
-      const navLine = document.getElementById("nav-line");
-      const onScroll = () => {
-        const y = window.scrollY;
-        if (y > 24) {
-          nav.classList.add("frost");
-          navLine.style.opacity = "1";
-        } else {
-          nav.classList.remove("frost");
-          navLine.style.opacity = "0";
-        }
-
-        // Parallax for hero image
-        document.querySelectorAll(".parallax").forEach((img) => {
-          const rect = img.getBoundingClientRect();
-          if (rect.bottom > 0 && rect.top < window.innerHeight) {
-            const speed = 0.18;
-            const offset = (rect.top * -1) * speed;
-            img.style.setProperty("--p", `${offset}px`);
-          }
-        });
-      };
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-
-      // Animated counters
-      const countObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            const el = entry.target;
-            const target = parseInt(el.dataset.count, 10);
-            const duration = 1400;
-            const start = performance.now();
-            const step = (now) => {
-              const t = Math.min((now - start) / duration, 1);
-              const eased = 1 - Math.pow(1 - t, 3);
-              el.textContent = Math.floor(target * eased).toString();
-              if (t < 1) requestAnimationFrame(step);
-              else el.textContent = target.toString();
-            };
-            requestAnimationFrame(step);
-            countObserver.unobserve(el);
-          });
-        },
-        { threshold: 0.4 }
-      );
-      document
-        .querySelectorAll("[data-count]")
-        .forEach((el) => countObserver.observe(el));
-
-      // Form fake-submit (no backend)
-      const form = document.getElementById("quoteForm");
-      const status = document.getElementById("formStatus");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const name = form.querySelector('[name="name"]').value.trim();
-        const email = form.querySelector('[name="email"]').value.trim();
-        if (!name || !email) {
-          status.classList.remove("hidden");
-          status.textContent =
-            "Merci de renseigner au moins votre nom et votre email.";
-          status.classList.remove("border-sage/40", "bg-sage/10");
-          status.classList.add("border-white/20", "bg-white/5");
-          return;
-        }
-        status.classList.remove("hidden", "border-white/20", "bg-white/5");
-        status.classList.add("border-sage/40", "bg-sage/10");
-        status.textContent =
-          "Merci, " +
-          name +
-          ". Votre demande nous est bien parvenue — un chef de projet vous contactera sous 24 h.";
-        form.reset();
-      });
-    </script>
+    <script src="assets/main.js"></script>
   </body>
 </html>

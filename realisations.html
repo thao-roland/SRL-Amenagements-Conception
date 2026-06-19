@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Réalisations — SRL Aménagements et Conceptions</title>
+    <meta name="description" content="Une sélection de pavages, terrasses, allées et aménagements extérieurs livrés par SRL." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: {
+        colors: { ink: "#0F1115", "ink-2": "#13161B", "ink-3": "#191D23",
+          sage: { DEFAULT: "#A7C4A0", soft: "#C7DCC1", deep: "#6E8B68" },
+          silver: { DEFAULT: "#D7DBE0", frost: "rgba(215,219,224,0.08)", line: "rgba(215,219,224,0.10)" } },
+        fontFamily: { sans: ['"Plus Jakarta Sans"', "Inter", "ui-sans-serif", "system-ui"] },
+        letterSpacing: { "ultra-tight": "-0.04em" } } } };
+    </script>
+  </head>
+  <body class="bg-ink text-white selection:bg-sage/30 selection:text-white page-enter">
+    <!-- NAV -->
+    <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 text-sage" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 20h18" /><path d="M5 20V9l7-4 7 4v11" /><path d="M5 13h14M5 17h14M9 9v11M15 9v11" />
+            </svg>
+          </span>
+          <div class="leading-tight">
+            <div class="text-[13px] tracking-[0.22em] text-white/90">SRL</div>
+            <div class="text-[10px] tracking-[0.38em] text-white/45">AMÉNAGEMENTS &amp; CONCEPTIONS</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-10 text-sm text-white/70">
+          <a class="nav-link hover:text-white transition" href="index.html">Accueil</a>
+          <a class="nav-link hover:text-white transition" href="services.html">Services</a>
+          <a class="nav-link is-active hover:text-white transition" href="realisations.html">Réalisations</a>
+          <a class="nav-link hover:text-white transition" href="approche.html">Approche</a>
+          <a class="nav-link hover:text-white transition" href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="cta hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium">Devis gratuit
+          <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+        </a>
+        <button id="burger" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-silver-line bg-silver-frost" aria-expanded="false" aria-label="Menu">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden frost border-t border-silver-line">
+        <div class="px-6 py-5 flex flex-col gap-4 text-sm text-white/80">
+          <a href="index.html">Accueil</a><a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a><a href="approche.html">Approche</a>
+          <a href="contact.html">Contact</a>
+          <a href="contact.html" class="cta inline-flex w-fit items-center gap-2 rounded-full px-5 py-2.5">Devis gratuit</a>
+        </div>
+      </div>
+      <div class="hairline opacity-0 transition-opacity duration-500" id="nav-line"></div>
+    </header>
+
+    <!-- HEADER -->
+    <section class="relative pt-40 pb-16 sm:pt-48 sm:pb-20 grain overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(167,196,160,0.10),transparent_60%)]"></div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 relative">
+        <div class="reveal max-w-4xl">
+          <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">RÉALISATIONS</div>
+          <h1 class="font-medium tracking-ultra-tight text-[clamp(2.4rem,6vw,5rem)] leading-[0.98]">
+            Chantiers livrés,
+            <span class="text-white/55">détails assumés.</span>
+          </h1>
+          <p class="mt-7 max-w-2xl text-lg text-white/65 leading-relaxed font-light">
+            Une sélection d'allées, terrasses, cours et aménagements
+            extérieurs — chacun avec son contexte, ses contraintes, ses
+            matériaux.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="relative pb-6">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="flex flex-wrap items-center gap-2 reveal">
+          <span class="text-[11px] tracking-[0.25em] text-white/40 mr-3">FILTRER</span>
+          <button class="filter is-active text-xs px-4 py-2 rounded-full border border-sage/50 bg-sage/10 text-white" data-filter="all">Tout</button>
+          <button class="filter text-xs px-4 py-2 rounded-full border border-silver-line bg-silver-frost text-white/70 hover:text-white transition" data-filter="pavage">Pavage</button>
+          <button class="filter text-xs px-4 py-2 rounded-full border border-silver-line bg-silver-frost text-white/70 hover:text-white transition" data-filter="pierre">Pierres naturelles</button>
+          <button class="filter text-xs px-4 py-2 rounded-full border border-silver-line bg-silver-frost text-white/70 hover:text-white transition" data-filter="terrassement">Terrassement</button>
+          <button class="filter text-xs px-4 py-2 rounded-full border border-silver-line bg-silver-frost text-white/70 hover:text-white transition" data-filter="cloture">Clôtures</button>
+          <button class="filter text-xs px-4 py-2 rounded-full border border-silver-line bg-silver-frost text-white/70 hover:text-white transition" data-filter="pelouse">Pelouse</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID -->
+    <section class="relative py-12 pb-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- 9 projects -->
+          <article class="project reveal frost rounded-2xl overflow-hidden group" data-cat="pavage">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80" alt="" class="w-full h-72 object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 text-[10px] tracking-[0.25em] bg-ink/70 border border-silver-line backdrop-blur rounded-full px-2.5 py-1">PAVAGE</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-medium">Allée carrossable — Klinker</h3>
+              <p class="mt-1 text-sm text-white/50 font-light">Résidence privée · 220 m²</p>
+            </div>
+          </article>
+
+          <article class="project reveal frost rounded-2xl overflow-hidden group" data-cat="pierre">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1517673400267-0251440c45dc?auto=format&fit=crop&w=1200&q=80" alt="" class="w-full h-72 object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 text-[10px] tracking-[0.25em] bg-ink/70 border border-silver-line backdrop-blur rounded-full px-2.5 py-1">PIERRE</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-medium">Mur en pierre bleue</h3>
+              <p class="mt-1 text-sm text-white/50 font-light">Jardin privé · 18 ml</p>
+            </div>
+          </article>
+
+          <article class="project reveal frost rounded-2xl overflow-hidden group" data-cat="pavage pelouse">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80" alt="" class="w-full h-72 object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 text-[10px] tracking-[0.25em] bg-ink/70 border border-silver-line backdrop-blur rounded-full px-2.5 py-1">PAVAGE · PELOUSE</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-medium">Cour minérale &amp; pelouse</h3>
+              <p class="mt-1 text-sm text-white/50 font-light">Maison de maître · 380 m²</p>
+            </div>
+          </article>
+
+          <article class="project reveal frost rounded-2xl overflow-hidden group" data-cat="terrassement">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=80" alt="" class="w-full h-72 object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 text-[10px] tracking-[0.25em] bg-ink/70 border border-silver-line backdrop-blur rounded-full px-2.5 py-1">TERRASSEMENT</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-medium">Plateforme &amp; fondations</h3>
+              <p class="mt-1 text-sm text-white/50 font-light">Bâtiment commercial · 540 m²</p>
+            </div>
+          </article>
+
+          <article class="project reveal frost rounded-2xl overflow-hidden group" data-cat="cloture">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1572455024205-cdf0598c5728?auto=format&fit=crop&w=1200&q=80" alt="" class="w-full h-72 object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 text-[10px] tracking-[0.25em] bg-ink/70 border border-silver-line backdrop-blur rounded-full px-2.5 py-1">CLÔTURE</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-medium">Clôture rigide &amp; portail</h3>
+              <p class="mt-1 text-sm text-white/50 font-light">Villa contemporaine · 90 ml</p>
+            </div>
+          </article>
+
+          <article class="project reveal frost rounded-2xl overflow-hidden group" data-cat="pelouse">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1592595896616-c37162298647?auto=format&fit=crop&w=1200&q=80" alt="" class="w-full h-72 object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 text-[10px] tracking-[0.25em] bg-ink/70 border border-silver-line backdrop-blur rounded-full px-2.5 py-1">PELOUSE</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-medium">Pelouse en rouleaux</h3>
+              <p class="mt-1 text-sm text-white/50 font-light">Jardin familial · 410 m²</p>
+            </div>
+          </article>
+
+          <article class="project reveal frost rounded-2xl overflow-hidden group" data-cat="pavage pierre">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1597047084897-51e81819a499?auto=format&fit=crop&w=1200&q=80" alt="" class="w-full h-72 object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 text-[10px] tracking-[0.25em] bg-ink/70 border border-silver-line backdrop-blur rounded-full px-2.5 py-1">PAVAGE · PIERRE</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-medium">Terrasse en pierre bleue</h3>
+              <p class="mt-1 text-sm text-white/50 font-light">Maison contemporaine · 65 m²</p>
+            </div>
+          </article>
+
+          <article class="project reveal frost rounded-2xl overflow-hidden group" data-cat="pavage">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=1200&q=80" alt="" class="w-full h-72 object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 text-[10px] tracking-[0.25em] bg-ink/70 border border-silver-line backdrop-blur rounded-full px-2.5 py-1">PAVAGE</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-medium">Allée pavée — porphyre</h3>
+              <p class="mt-1 text-sm text-white/50 font-light">Domaine privé · 180 m²</p>
+            </div>
+          </article>
+
+          <article class="project reveal frost rounded-2xl overflow-hidden group" data-cat="cloture pelouse">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=80" alt="" class="w-full h-72 object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 text-[10px] tracking-[0.25em] bg-ink/70 border border-silver-line backdrop-blur rounded-full px-2.5 py-1">CLÔTURE · PELOUSE</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-base font-medium">Jardin clos &amp; pelouse</h3>
+              <p class="mt-1 text-sm text-white/50 font-light">Propriété de campagne · 1 200 m²</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative py-24 border-t border-silver-line">
+      <div class="mx-auto max-w-5xl px-6 lg:px-10 text-center reveal">
+        <h2 class="font-medium tracking-ultra-tight text-[clamp(1.8rem,4vw,3rem)] leading-[1.05]">
+          Le prochain chantier
+          <span class="text-white/55">pourrait être le vôtre.</span>
+        </h2>
+        <div class="mt-8">
+          <a href="contact.html" class="cta inline-flex items-center gap-3 rounded-full px-7 py-4 text-sm font-medium">
+            Demander un devis gratuit
+            <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative border-t border-silver-line">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost">
+                <svg viewBox="0 0 24 24" class="h-4 w-4 text-sage" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 20h18" /><path d="M5 20V9l7-4 7 4v11" /><path d="M5 13h14M5 17h14M9 9v11M15 9v11" />
+                </svg>
+              </span>
+              <div class="leading-tight"><div class="text-[13px] tracking-[0.22em]">SRL</div><div class="text-[10px] tracking-[0.38em] text-white/45">AMÉNAGEMENTS &amp; CONCEPTIONS</div></div>
+            </div>
+            <p class="mt-5 text-sm text-white/45 font-light leading-relaxed max-w-xs">Pavage, terrassement, pierres naturelles, égouttages, pelouses et clôtures.</p>
+          </div>
+          <div>
+            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">CONTACT</div>
+            <ul class="space-y-2 text-sm text-white/70 font-light">
+              <li>contact@srl-amenagements.be</li><li>+32 (0)4 00 00 00 00</li>
+              <li>Aménagements extérieurs &amp; pavage</li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">EXPLORER</div>
+            <ul class="space-y-2 text-sm text-white/70 font-light">
+              <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+              <li><a href="realisations.html" class="hover:text-white transition">Réalisations</a></li>
+              <li><a href="approche.html" class="hover:text-white transition">Notre approche</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Devis gratuit</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hairline mt-14"></div>
+        <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-white/35">
+          <div>© 2026 SRL AMÉNAGEMENTS &amp; CONCEPTIONS — TOUS DROITS RÉSERVÉS</div>
+          <div class="flex items-center gap-6"><a href="#" class="hover:text-white/70 transition">MENTIONS LÉGALES</a><a href="#" class="hover:text-white/70 transition">CONFIDENTIALITÉ</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/main.js"></script>
+    <script>
+      // Project filter
+      const buttons = document.querySelectorAll(".filter");
+      const projects = document.querySelectorAll(".project");
+      buttons.forEach((btn) =>
+        btn.addEventListener("click", () => {
+          const f = btn.dataset.filter;
+          buttons.forEach((b) => {
+            b.classList.remove("is-active", "border-sage/50", "bg-sage/10", "text-white");
+            b.classList.add("border-silver-line", "bg-silver-frost", "text-white/70");
+          });
+          btn.classList.add("is-active", "border-sage/50", "bg-sage/10", "text-white");
+          btn.classList.remove("border-silver-line", "bg-silver-frost", "text-white/70");
+          projects.forEach((p) => {
+            const cats = (p.dataset.cat || "").split(/\s+/);
+            const show = f === "all" || cats.includes(f);
+            p.style.display = show ? "" : "none";
+          });
+        })
+      );
+    </script>
+  </body>
+</html>

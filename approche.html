@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Approche — SRL Aménagements et Conceptions</title>
+    <meta name="description" content="Méthode, matériaux, garanties — comment SRL pense et exécute un chantier d'aménagement extérieur." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: {
+        colors: { ink: "#0F1115", "ink-2": "#13161B", "ink-3": "#191D23",
+          sage: { DEFAULT: "#A7C4A0", soft: "#C7DCC1", deep: "#6E8B68" },
+          silver: { DEFAULT: "#D7DBE0", frost: "rgba(215,219,224,0.08)", line: "rgba(215,219,224,0.10)" } },
+        fontFamily: { sans: ['"Plus Jakarta Sans"', "Inter", "ui-sans-serif", "system-ui"] },
+        letterSpacing: { "ultra-tight": "-0.04em" } } } };
+    </script>
+  </head>
+  <body class="bg-ink text-white selection:bg-sage/30 selection:text-white page-enter">
+    <!-- NAV -->
+    <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 text-sage" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 20h18" /><path d="M5 20V9l7-4 7 4v11" /><path d="M5 13h14M5 17h14M9 9v11M15 9v11" />
+            </svg>
+          </span>
+          <div class="leading-tight">
+            <div class="text-[13px] tracking-[0.22em] text-white/90">SRL</div>
+            <div class="text-[10px] tracking-[0.38em] text-white/45">AMÉNAGEMENTS &amp; CONCEPTIONS</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-10 text-sm text-white/70">
+          <a class="nav-link hover:text-white transition" href="index.html">Accueil</a>
+          <a class="nav-link hover:text-white transition" href="services.html">Services</a>
+          <a class="nav-link hover:text-white transition" href="realisations.html">Réalisations</a>
+          <a class="nav-link is-active hover:text-white transition" href="approche.html">Approche</a>
+          <a class="nav-link hover:text-white transition" href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="cta hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium">Devis gratuit
+          <svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+        </a>
+        <button id="burger" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-silver-line bg-silver-frost" aria-expanded="false" aria-label="Menu">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden frost border-t border-silver-line">
+        <div class="px-6 py-5 flex flex-col gap-4 text-sm text-white/80">
+          <a href="index.html">Accueil</a><a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a><a href="approche.html">Approche</a>
+          <a href="contact.html">Contact</a>
+          <a href="contact.html" class="cta inline-flex w-fit items-center gap-2 rounded-full px-5 py-2.5">Devis gratuit</a>
+        </div>
+      </div>
+      <div class="hairline opacity-0 transition-opacity duration-500" id="nav-line"></div>
+    </header>
+
+    <!-- HEADER -->
+    <section class="relative pt-40 pb-20 sm:pt-48 sm:pb-28 grain overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(167,196,160,0.10),transparent_60%)]"></div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 relative">
+        <div class="reveal max-w-4xl">
+          <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">NOTRE APPROCHE</div>
+          <h1 class="font-medium tracking-ultra-tight text-[clamp(2.4rem,6vw,5rem)] leading-[0.98]">
+            Une méthode mesurée,
+            <span class="text-white/55">de la première visite au dernier joint.</span>
+          </h1>
+          <p class="mt-7 max-w-2xl text-lg text-white/65 leading-relaxed font-light">
+            Notre travail tient parce que rien n'est laissé au hasard : le
+            sol, le drainage, le matériau, la pose et la finition forment un
+            tout. Voici comment nous procédons.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="relative pb-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <article class="reveal frost rounded-2xl p-8 sm:p-10">
+            <div class="text-sage text-sm tracking-[0.25em]">01 — ÉCOUTE</div>
+            <h3 class="mt-4 text-xl font-medium">Visite sur site</h3>
+            <p class="mt-3 text-white/55 font-light leading-relaxed">
+              Nous prenons les niveaux, sondons le sol, comprenons les
+              écoulements et écoutons votre projet — sans précipitation.
+            </p>
+          </article>
+          <article class="reveal frost rounded-2xl p-8 sm:p-10" style="transition-delay: 80ms">
+            <div class="text-sage text-sm tracking-[0.25em]">02 — CONCEPTION</div>
+            <h3 class="mt-4 text-xl font-medium">Plan &amp; devis détaillé</h3>
+            <p class="mt-3 text-white/55 font-light leading-relaxed">
+              Plan de calepinage, choix des matériaux, budget transparent,
+              délais réalistes. Pas de mauvaise surprise au démarrage.
+            </p>
+          </article>
+          <article class="reveal frost rounded-2xl p-8 sm:p-10" style="transition-delay: 160ms">
+            <div class="text-sage text-sm tracking-[0.25em]">03 — TERRASSEMENT</div>
+            <h3 class="mt-4 text-xl font-medium">Préparer le sol</h3>
+            <p class="mt-3 text-white/55 font-light leading-relaxed">
+              Décapage, déblai, empierrement, compactage et drainage —
+              l'invisible qui garantit la longévité du visible.
+            </p>
+          </article>
+          <article class="reveal frost rounded-2xl p-8 sm:p-10" style="transition-delay: 240ms">
+            <div class="text-sage text-sm tracking-[0.25em]">04 — POSE</div>
+            <h3 class="mt-4 text-xl font-medium">Pavage à la main</h3>
+            <p class="mt-3 text-white/55 font-light leading-relaxed">
+              Pose manuelle, calepinage fidèle au plan, coupes ajustées,
+              joints alignés. Le geste d'artisan, toujours.
+            </p>
+          </article>
+          <article class="reveal frost rounded-2xl p-8 sm:p-10" style="transition-delay: 320ms">
+            <div class="text-sage text-sm tracking-[0.25em]">05 — FINITION</div>
+            <h3 class="mt-4 text-xl font-medium">Jointoiement &amp; remise en état</h3>
+            <p class="mt-3 text-white/55 font-light leading-relaxed">
+              Joints stabilisés, nettoyage haute pression, remise en état
+              des abords, pelouse soignée. Le chantier rendu propre.
+            </p>
+          </article>
+          <article class="reveal frost rounded-2xl p-8 sm:p-10" style="transition-delay: 400ms">
+            <div class="text-sage text-sm tracking-[0.25em]">06 — SUIVI</div>
+            <h3 class="mt-4 text-xl font-medium">Garantie &amp; conseils</h3>
+            <p class="mt-3 text-white/55 font-light leading-relaxed">
+              10 ans de garantie sur la pose, conseils d'entretien
+              personnalisés, et un interlocuteur unique sur la durée.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATERIALS -->
+    <section class="relative py-20 border-t border-silver-line">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div class="lg:col-span-4 reveal">
+            <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">MATÉRIAUX</div>
+            <h2 class="font-medium tracking-ultra-tight text-[clamp(2rem,4vw,3rem)] leading-[1.05]">
+              Choisis,
+              <span class="text-white/55">jamais imposés.</span>
+            </h2>
+            <p class="mt-6 text-white/60 font-light leading-relaxed">
+              Nous travaillons avec des fournisseurs reconnus en Belgique et
+              en Europe. Pour chaque chantier, nous proposons une sélection
+              cohérente avec l'architecture, l'usage et le budget.
+            </p>
+          </div>
+          <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-5 reveal">
+            <div class="frost rounded-xl p-5">
+              <div class="text-sm font-medium">Pierre bleue belge</div>
+              <div class="text-xs text-white/45 mt-1">Sciée, bouchardée, vieillie</div>
+            </div>
+            <div class="frost rounded-xl p-5">
+              <div class="text-sm font-medium">Granit</div>
+              <div class="text-xs text-white/45 mt-1">Gris, noir, beige</div>
+            </div>
+            <div class="frost rounded-xl p-5">
+              <div class="text-sm font-medium">Porphyre</div>
+              <div class="text-xs text-white/45 mt-1">Pavés clivés</div>
+            </div>
+            <div class="frost rounded-xl p-5">
+              <div class="text-sm font-medium">Klinker</div>
+              <div class="text-xs text-white/45 mt-1">Cuit, durable</div>
+            </div>
+            <div class="frost rounded-xl p-5">
+              <div class="text-sm font-medium">Pavés béton</div>
+              <div class="text-xs text-white/45 mt-1">Gammes architecturales</div>
+            </div>
+            <div class="frost rounded-xl p-5">
+              <div class="text-sm font-medium">Grès &amp; quartzite</div>
+              <div class="text-xs text-white/45 mt-1">Dallages extérieurs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEES -->
+    <section class="relative py-20 border-t border-silver-line">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="reveal max-w-3xl">
+          <div class="text-[11px] tracking-[0.3em] text-sage/90 mb-5">ENGAGEMENTS</div>
+          <h2 class="font-medium tracking-ultra-tight text-[clamp(2rem,4vw,3rem)] leading-[1.05]">
+            Trois promesses.
+            <span class="text-white/55">Tenues à chaque chantier.</span>
+          </h2>
+        </div>
+        <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="reveal frost rounded-2xl p-8">
+            <svg viewBox="0 0 32 32" class="h-7 w-7 text-sage mb-6" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M16 3l11 5v8c0 7-5 12-11 13C10 28 5 23 5 16V8l11-5Z" /><path d="M11 16l4 4 7-8" /></svg>
+            <h3 class="text-lg font-medium">Garantie 10 ans</h3>
+            <p class="mt-2 text-sm text-white/55 font-light leading-relaxed">Sur la pose et la stabilité de nos pavages, à conditions normales d'usage.</p>
+          </div>
+          <div class="reveal frost rounded-2xl p-8" style="transition-delay: 80ms">
+            <svg viewBox="0 0 32 32" class="h-7 w-7 text-sage mb-6" fill="none" stroke="currentColor" stroke-width="1.25"><circle cx="16" cy="16" r="12" /><path d="M16 8v9l5 3" /></svg>
+            <h3 class="text-lg font-medium">Délais respectés</h3>
+            <p class="mt-2 text-sm text-white/55 font-light leading-relaxed">Un planning communiqué, suivi et tenu — sans rallonges injustifiées.</p>
+          </div>
+          <div class="reveal frost rounded-2xl p-8" style="transition-delay: 160ms">
+            <svg viewBox="0 0 32 32" class="h-7 w-7 text-sage mb-6" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M4 26l8-18 8 18M14 20h12" /><path d="M22 14l4 12" /></svg>
+            <h3 class="text-lg font-medium">Chantier propre</h3>
+            <p class="mt-2 text-sm text-white/55 font-light leading-relaxed">Site rangé chaque soir, abords nettoyés, voisins respectés.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative py-24 border-t border-silver-line">
+      <div class="mx-auto max-w-5xl px-6 lg:px-10 text-center reveal">
+        <h2 class="font-medium tracking-ultra-tight text-[clamp(1.8rem,4vw,3rem)] leading-[1.05]">
+          Prêt à démarrer ?
+          <span class="text-white/55">Demandez votre devis.</span>
+        </h2>
+        <div class="mt-8">
+          <a href="contact.html" class="cta inline-flex items-center gap-3 rounded-full px-7 py-4 text-sm font-medium">
+            Demander un devis gratuit
+            <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative border-t border-silver-line">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-md border border-silver-line bg-silver-frost">
+                <svg viewBox="0 0 24 24" class="h-4 w-4 text-sage" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 20h18" /><path d="M5 20V9l7-4 7 4v11" /><path d="M5 13h14M5 17h14M9 9v11M15 9v11" />
+                </svg>
+              </span>
+              <div class="leading-tight"><div class="text-[13px] tracking-[0.22em]">SRL</div><div class="text-[10px] tracking-[0.38em] text-white/45">AMÉNAGEMENTS &amp; CONCEPTIONS</div></div>
+            </div>
+            <p class="mt-5 text-sm text-white/45 font-light leading-relaxed max-w-xs">Pavage, terrassement, pierres naturelles, égouttages, pelouses et clôtures.</p>
+          </div>
+          <div>
+            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">CONTACT</div>
+            <ul class="space-y-2 text-sm text-white/70 font-light">
+              <li>contact@srl-amenagements.be</li><li>+32 (0)4 00 00 00 00</li>
+              <li>Aménagements extérieurs &amp; pavage</li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-[11px] tracking-[0.25em] text-white/40 mb-4">EXPLORER</div>
+            <ul class="space-y-2 text-sm text-white/70 font-light">
+              <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+              <li><a href="realisations.html" class="hover:text-white transition">Réalisations</a></li>
+              <li><a href="approche.html" class="hover:text-white transition">Notre approche</a></li>
+              <li><a href="contact.html" class="hover:text-white transition">Devis gratuit</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hairline mt-14"></div>
+        <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-white/35">
+          <div>© 2026 SRL AMÉNAGEMENTS &amp; CONCEPTIONS — TOUS DROITS RÉSERVÉS</div>
+          <div class="flex items-center gap-6"><a href="#" class="hover:text-white/70 transition">MENTIONS LÉGALES</a><a href="#" class="hover:text-white/70 transition">CONFIDENTIALITÉ</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
